@@ -1,22 +1,24 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Person} from "../../models/person.model";
 
+
 @Component({
-  selector: 'listComponent',
-  templateUrl: './listComponent.component.html',
-  styleUrls: ['./listComponent.component.css']
+  selector: 'listItemComponent',
+  templateUrl: './listItemComponent.component.html',
+  styleUrls: ['./listItemComponent.component.css']
 })
-export class listComponentComponent {
+
+export class listItemComponentComponent implements OnInit {
   @Input() title: string = '';
-  //@Output() btnClickEvent = new EventEmitter();
-  @Input() People: Person[] = [];
-  i: number = 0;
- /* @Input() person: Person = {
-    firstName:  'FirstName 1',
+  @Output() btnClickEvent = new EventEmitter();
+
+  /*@Input() person: Person = {
+    firstName: 'FirstName 1',
     lastName: 'LastName 2',
     age: 23
   };*/
- /* @Output() People: Person[] = [
+
+  @Output() People: Person[] = [
     { firstName: 'FirstName 1', lastName: 'LastName 1', age: 23 },
     { firstName: 'FirstName 2', lastName: 'LastName 2', age: 35 },
     { firstName: 'FirstName 3', lastName: 'LastName 3', age: 30 },
@@ -29,13 +31,18 @@ export class listComponentComponent {
     { firstName: 'FirstName 10', lastName: 'LastName 10', age: 33 }
   ];
 
+
+ // @Input()  People: Person[] = [];
   people = this.People;
-*/
+  constructor() { }
 
-  obBtnClick() {
-    console.log('Click from child');
-    //this.btnClickEvent.emit();
+  ngOnInit() {
 
-    this.title = 'Hello';
+  }
+
+  onBtnClick(idx: number) {
+
+this.People.splice(idx, 1)
+
   }
 }

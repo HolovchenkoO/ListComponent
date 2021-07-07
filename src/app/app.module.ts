@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {listComponentComponent} from './components/listComponent/listComponent.component';
+import {listItemComponentComponent} from './components/listItemComponent/listItemComponent.component';
 import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    listComponentComponent
+    listComponentComponent,
+    listItemComponentComponent
   ],
   imports: [
     BrowserModule,

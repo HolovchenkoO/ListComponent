@@ -5,13 +5,16 @@
   <title>Title</title>
 </head>
 <body>
-<!--<ul class="people">
-  <li *ngFor="let person of People">
+<ul class="people">
+  <li *ngFor="let person of People;let idx = index;">
     <div class="badge">{{person.firstName}}</div>
     <div>{{person.lastName}}</div>
     <div>{{person.age}}</div>
+    <button (click)="onBtnClick(idx)" >Delete</button>
   </li>
-</ul>-->
-<!--<listItemComponent>Title</listItemComponent>-->
+</ul>
+<!--<button (click)="onBtnClick()" >Delete</button>-->
+
+
 </body>
 </html>

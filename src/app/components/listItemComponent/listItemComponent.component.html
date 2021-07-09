@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body >
-<p>Имя пользователя: {{firstName}}</p>
-<p>Фамилия пользователя: {{lastName}}</p>
-<p>Возраст пользователя: {{age}}</p>
-<p *ngFor="let person of People;let idx = index;">
-<button (click)="onBtnClick(idx)" >Delete</button>
-</p>
 
-</body>
-</html>
+<ul class="people">
+  <li *ngFor="let person of People;let idx = index;">
+    <div class="badge">{{person.firstName}}</div>
+    <div>{{person.lastName}}</div>
+    <div>{{person.age}}</div>
+    <button (click)="onBtnClick(idx)" >Delete</button>
+  </li>
+</ul>

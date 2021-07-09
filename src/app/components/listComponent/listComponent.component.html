@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-<ul class="people">
-  <li *ngFor="let person of People">
-    <div class="badge">{{person.firstName}}</div>
-    <div>{{person.lastName}}</div>
-    <div>{{person.age}}</div>
-  </li>
-</ul>
-</body>
-</html>
+
+ <listItemComponent [People]="People"></listItemComponent>
+

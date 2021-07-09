@@ -3,8 +3,15 @@ import {Person} from "../../models/person.model";
 
 @Component({
   selector: 'listComponent',
-  templateUrl: './listComponent.component.html',
+ templateUrl: './listComponent.component.html',
   styleUrls: ['./listComponent.component.css']
+ /* template: `<ul class="people">
+    <li *ngFor="let person of People">
+      <div class="badge">{{person.firstName}}</div>
+      <div>{{person.lastName}}</div>
+      <div>{{person.age}}</div>
+    </li>
+  </ul>`*/
 })
 export class listComponentComponent {
   @Input() title: string = '';

@@ -6,11 +6,14 @@ import {Person} from "../../models/person.model";
   selector: 'listItemComponent',
   templateUrl: './listItemComponent.component.html',
   styleUrls: ['./listItemComponent.component.css']
-})
+ })
 
 export class listItemComponentComponent implements OnInit {
   @Input() title: string = '';
   @Output() btnClickEvent = new EventEmitter();
+
+
+  @Input() People: Person []= [];
 
   /*@Input() person: Person = {
     firstName: 'FirstName 1',
@@ -18,7 +21,7 @@ export class listItemComponentComponent implements OnInit {
     age: 23
   };*/
 
-  @Output() People: Person[] = [
+  /* @Output() People: Person[] = [
     { firstName: 'FirstName 1', lastName: 'LastName 1', age: 23 },
     { firstName: 'FirstName 2', lastName: 'LastName 2', age: 35 },
     { firstName: 'FirstName 3', lastName: 'LastName 3', age: 30 },
@@ -30,10 +33,13 @@ export class listItemComponentComponent implements OnInit {
     { firstName: 'FirstName 9', lastName: 'LastName 9', age: 77 },
     { firstName: 'FirstName 10', lastName: 'LastName 10', age: 33 }
   ];
+*/
 
 
- // @Input()  People: Person[] = [];
-  people = this.People;
+
+  @Input() firstName: string = '';
+  @Input() lastName: string = '';
+  @Input() age: number = 0;
   constructor() { }
 
   ngOnInit() {
@@ -43,6 +49,7 @@ export class listItemComponentComponent implements OnInit {
   onBtnClick(idx: number) {
 
 this.People.splice(idx, 1)
+
 
   }
 }

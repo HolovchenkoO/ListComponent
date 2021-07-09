@@ -9,7 +9,7 @@ import {Person} from "./models/person.model";
 })
 export class AppComponent implements OnInit{
   title = 'ListComponent';
-    @Output() People: Person[] = [
+    People: Person[] = [
     { firstName: 'FirstName 1', lastName: 'LastName 1', age: 23 },
     { firstName: 'FirstName 2', lastName: 'LastName 2', age: 35 },
     { firstName: 'FirstName 3', lastName: 'LastName 3', age: 30 },
